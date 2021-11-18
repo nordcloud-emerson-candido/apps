@@ -1,0 +1,23 @@
+sysdig:
+  image:
+    tag: 12.1.0
+  secure:
+    enabled: true
+  auditLog:
+    enabled: false
+  nodeImageAnalyzer:
+    deploy: false
+  nodeAnalyzer:
+    deploy: false
+  sysdig:
+    settings:
+      collector: ingest-eu1.app.sysdig.com
+      collector_port: 6443
+  resourceProfile: custom
+  resources:
+    requests:
+      cpu: 300m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
